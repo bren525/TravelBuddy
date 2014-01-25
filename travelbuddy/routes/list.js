@@ -1,6 +1,8 @@
-
 exports.index = function(req, res){
   res.render('list', {
-    alltrips: global.alltrips
+    title: 'Travel Buddy',
+    alltrips: global.alltrips,
+    taxitrips: global.alltrips,
+    publictrips: global.alltrips
   });
 };

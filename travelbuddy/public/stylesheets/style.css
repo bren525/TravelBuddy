@@ -123,3 +123,63 @@ table {
 	color: #1F438D;
 	display: inline;
 }
+
+#container{
+	background:#EBf2ED;
+	text-align:center;
+	margin: 0px auto;
+	height:100%;
+	border: 10px solid #EBf2ED;
+	font-weight:regular;
+	font-size:30px;
+	font-family: 'Lato', sans-serif;
+}
+#taxi{
+	border:0px solid red;
+	display:inline-block;
+	position:relative;
+	text-align:left;
+	width:60%;
+	font-size:20px;
+
+}
+.icon {
+	position:absolute;
+	border:0px solid green;
+	display:inline;
+	width:110px;
+	height:100%;
+	float:left;
+	background:url(/images/bg.jpg) no-repeat center center ;
+	text-align:center;
+}
+.userSchool{
+	border:0px solid yellow;
+	font-size:12px;
+}
+#public{
+	display:inline-block;
+	position:relative;
+	text-align:left;
+	width:60%;
+	font-size:20px;
+	border:0px solid red;
+}
+.triplist{
+	border:0px solid white;
+	display:block;
+	width:100%;
+	min-width:200px;
+	font-size:20px;
+}
+.tripinfo{
+	border:0px solid orange;
+	display:block;
+	width:100%;
+	min-width:200px;
+	font-size:20px;
+}
+.tripdate{
+	font-size:12px;	
+	width:40%;
+}

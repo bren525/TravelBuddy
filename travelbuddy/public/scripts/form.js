@@ -27,8 +27,8 @@ $(document).ready(
         $(".unselected").click(function(){
         	$(".selected").removeClass("selected");
         	$(this).addClass("selected");
-          var d = new Date(parseInt($("#currentdate").val()) + (parseInt($(this).attr('id'))-1)*24*60*60*1000);
-          $("#date").val((d.getMonth()+1)+"/"+d.getDate()+"/"+d.getFullYear());
+          	var d = new Date(parseInt($("#currentdate").val()) + (parseInt($(this).attr('id'))-1)*24*60*60*1000);
+          	$("#date").val((d.getMonth()+1)+"/"+d.getDate()+"/"+d.getFullYear());
         });
 
         $("#school").blur(function() {
@@ -71,6 +71,4 @@ $(document).ready(
         	}
         	return true;
 		});
-
-          
     });

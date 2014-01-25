@@ -24,5 +24,5 @@ exports.addTrip = function(req,res){
 	d.setMilliseconds(0);
 	var newTrip = new Trip(req.body.user, "taxi" ,req.body.school, req.body.location1, req.body.location2, d)
 	global.alltrips.push(newTrip);
-	res.redirect("/list");
+	res.redirect("/");	
 };
