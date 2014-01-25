@@ -14,6 +14,7 @@ exports.addTrip = function(req,res){
 	//user, transporation, school, start_location, end_location, datetime
 	var d = new Date();
 	var monthdayyear = req.body.date.split("/");
+	console.log(monthdayyear);
 	d.setMonth(monthdayyear[0]);
 	d.setDate(monthdayyear[1]);
 	d.setYear(monthdayyear[2]);
