@@ -14,15 +14,8 @@ $(document).ready(
         	var l2=$('[name="location2"]').val();
         	$('[name="location1"]').val(l2);
         	$('[name="location2"]').val(l1);
-            $(this).toggleClass("left right");
-            if($(this).hasClass("right")){
-                $(this).text("-->")
-            }else if($(this).hasClass("left")){
-                $(this).text("<--")
-            }else{
-                $(this).text("No Class")
-            }
-            return false;        	
+          $(this).toggleClass("left right");
+          return false;        	
         });
         $(".unselected").click(function(){
         	$(".selected").removeClass("selected");
@@ -46,8 +39,8 @@ $(document).ready(
         		return false;	
         	}
         	var s2=parseInt(s1);
-        	if(s2<0 || s2>23) {
-        		alert("hours should be between 0-23");
+        	if(s2<0 || s2>11) {
+        		alert("hours should be between 0-11");
         		$('#hours').val("");
         		return false;	
         	}
@@ -71,6 +64,43 @@ $(document).ready(
         	}
         	return true;
 		});
+    $("#taxi").click(function(){
+      $(this).toggleClass("on");
+      if($("#transportation").val() == "both"){
+        $("#transportation").val("transit");
+      }else if($("#transportation").val() == "taxi"){
+        $("#transportation").val("none");
+      }else if($("#transportation").val() == "transit"){
+        $("#transportation").val("both");
+      }else{
+        $("#transportation").val("taxi");
+      }
+      console.log($("#transportation").val());
+    });
 
+    $("#transit").click(function(){
+      $(this).toggleClass("on");
+      if($("#transportation").val() == "both"){
+        $("#transportation").val("taxi");
+      }else if($("#transportation").val() == "taxi"){
+        $("#transportation").val("both");
+      }else if($("#transportation").val() == "transit"){
+        $("#transportation").val("none");
+      }else{
+        $("#transportation").val("transit");
+      }
+      console.log($("#transportation").val());
+    });
+    $("#ampm").click(function(){
+      $(this).toggleClass("pm");
+      if($(this).hasClass("pm")){
+        $(this).text("PM");
+        $("#ampmin").val("pm");
+      }else{
+        $(this).text("AM");
+        $("#ampmin").val("am");
+      }
+      console.log($("#ampmin").val());
+    });
           
     });

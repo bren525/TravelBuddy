@@ -3,15 +3,20 @@ extends layout
 block content
   div(id="title1")=title
   form(name="startinput" action="/submit" method = "post")
-    input(type="hidden" name="user" value="bob")
+    input(type="hidden" name="user" value="Sharon")
 
+    p
+      input(id="transportation" type="hidden" value = "none" name = "transportation")
+      div(id="taxi")
+      div(id="transit")
+      //div(id="taxilabel") Taxi
+      //div(id="tranlabel") Public Transit
     p
       div(id="inform") I'm a student at &nbsp;
         input(type="text" id="school" name="school" placeholder="School ")  
     p
       input(type="text" id="location1" name="location1" placeholder="School ")
-      
-      button(id="switch" value="switch" class="right" style="margin-left:65px;margin-right:65px;") -->
+      button(id="switch" value="switch" class="right" style="margin-left:65px;margin-right:65px;")  
       input(type="text" id="location2" name="location2" placeholder="Destination ")
     p
       div(id="leavetext") I need to leave by
@@ -54,6 +59,8 @@ block content
       input(type="text" id="hours" name="hours" placeholder="Hours")
       span &nbsp;:&nbsp;
       input(type="text" id="minutes" name="minutes" placeholder="Minutes")
+      div(id="ampm") AM
+      input(type="hidden" id="ampmin" name="ampm" value="am")
     p
       div(id="submitbutton")
         input(type="submit" value="Submit" class = "btn btn-default")
