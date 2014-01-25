@@ -5,6 +5,7 @@
 
 var express = require('express');
 var routes = require('./routes');
+var debug = require('./routes/debug');
 var user = require('./routes/user');
 var http = require('http');
 var path = require('path');
@@ -42,6 +43,7 @@ global.alltrips = [
 ];
 
 app.get('/', routes.index);
+app.get('/debug', debug.index);
 app.get('/users', user.list);
 
 http.createServer(app).listen(app.get('port'), function(){
