@@ -19,7 +19,7 @@ $(document).ready(
             console.log("clicked!")
         	$(".selected").removeClass("selected");
         	$(this).toggleClass("selected");
-            $(this).text("selected");
+            //$(this).text("selected");
 
         });
         var today = new Date();

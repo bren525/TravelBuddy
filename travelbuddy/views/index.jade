@@ -1,11 +1,10 @@
 extends layout
 
 block content
-  
-  h1= title
+  div(id="title1")=title
   form(name="startinput" action="/submit" method = "post")
     p
-      div I'm a student at 
+      div(id="inform") I'm a student at 
         input(type="text" name="school" placeholder="School")  
     p
       input(type="text" name="location1" placeholder="School")
@@ -32,5 +31,5 @@ block content
       span &nbsp;:&nbsp;
       input(type="text" name="minutes" placeholder="Minutes")
     p
-      input(type="submit" value="Submit" class = "btn btn-default")
-
+      div(id="submitbutton")
+        input(type="submit" value="Submit" class = "btn btn-default")
