@@ -9,3 +9,15 @@ block content
     div
       span(class="glyphicon glyphicon-bullhorn")
       span #{trip.user} | #{trip.start_location} | #{trip.end_location} | #{trip.start_time}
+  div
+    form(name="startinput" action="/submit" method = "post")  
+      div(class = "control-group")
+        label(class = "control-group" for = "inputIcon") Start
+        div(class = "controls")
+          div(class = "input-prepend")
+            span(class = "add-on")
+              span(class = "glyphicon glyphicon-search")
+            input(class = "span2" id = "inputIcon" type="text" name="start")
+      div
+        input(type="submit" value="Submit" class = "btn btn-default")
+
