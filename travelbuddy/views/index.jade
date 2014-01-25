@@ -2,21 +2,26 @@ extends layout
 
 block content
   h1= title
-  button(class="btn btn-primary" type="button") Test!
-  p Welcome to #{title}
-  div
-  - each trip in alltrips
-    div
-      span(class="glyphicon glyphicon-bullhorn")
-      span #{trip.user} | #{trip.start_location} | #{trip.end_location} | #{trip.start_time}
-  div
-    form(name="startinput" action="/submit" method = "post")  
-      div(class = "control-group")
-        label(class = "control-group" for = "inputIcon") Start
-        div(class = "controls")
-          div(class = "input-prepend")
-            span(class = "add-on")
-              span(class = "glyphicon glyphicon-search")
-            input(class = "span2" id = "inputIcon" type="text" name="start")
-        input(type="submit" value="Submit" class = "btn btn-default")
+  form(name="startinput" action="/submit" method = "post")
+    p
+      div I'm a student at 
+        input(type="text" name="school" placeholder="School")  
+    p
+      input(type="text" name="location1" placeholder="School")
+      button(id="switch" value="switch" onclick="javascript:return false;") switch
+      input(type="text" name="location2" placeholder="Destination")
+    p
+      div I need to leave by
+    p
+      input(type="hidden" name = "date")
+      - for (var i=0; i<7; i++) {
+          button(id=i onclick="javascript:return false;") i
+      - }
+    p at
+    p
+      input(type="text" name="hours" placeholder="Hours")
+      span &nbsp;:&nbsp;
+      input(type="text" name="minutes" placeholder="Minutes")
+    p
+      input(type="submit" value="Submit" class = "btn btn-default")
 
