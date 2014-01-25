@@ -1,7 +1,7 @@
 extends layout
 
 block content
-  script(src="form.js")
+  
   h1= title
   form(name="startinput" action="/submit" method = "post")
     p
@@ -9,15 +9,23 @@ block content
         input(type="text" name="school" placeholder="School")  
     p
       input(type="text" name="location1" placeholder="School")
-      button(id="switch" value="switch" onclick="javascript:return false;") switch
+      button(id="switch" value="switch" class="right") -->
       input(type="text" name="location2" placeholder="Destination")
     p
       div I need to leave by
     p
       input(type="hidden" name = "date")
       - for (var i=0; i<7; i++) {
-          button(id=i onclick="javascript:return false;") i
+          //- div(id=i class="unselected") i
       - }
+      div(id="1" class="unselected") 1
+      div(id="2" class="unselected") 2
+      div(id="3" class="unselected") 3
+      div(id="4" class="unselected") 4
+      div(id="5" class="unselected") 5
+      div(id="6" class="unselected") 6
+      div(id="7" class="unselected") 7
+
     p at
     p
       input(type="text" name="hours" placeholder="Hours")

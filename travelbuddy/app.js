@@ -7,6 +7,7 @@ var express = require('express');
 var routes = require('./routes');
 var debug = require('./routes/debug');
 var user = require('./routes/user');
+var listTrips = require ('./routes/list')
 var http = require('http');
 var path = require('path');
 
@@ -45,6 +46,7 @@ global.alltrips = [
 app.get('/', routes.index);
 app.get('/debug', debug.index);
 app.get('/users', user.list);
+app.get('/list',listTrips.index)
 
 app.post('/submit',routes.addTrip);
 

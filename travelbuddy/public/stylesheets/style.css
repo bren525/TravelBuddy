@@ -6,3 +6,15 @@ body {
 a {
   color: #00B7FF;
 }
+.unselected{
+	height: 100px;
+	width: 100px;
+	background-color: #86cdeb;
+	display: inline-block;
+}
+.selected {
+	height: 150px;
+	width: 150px;
+	background-color: #d24726;
+	display: inline-block;
+}
