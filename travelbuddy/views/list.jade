@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  div
+  - each trip in alltrips
+    div
+      span(class="glyphicon glyphicon-bullhorn")
+      span #{trip.user} | #{trip.start_location} | #{trip.end_location} | #{trip.start_time}
