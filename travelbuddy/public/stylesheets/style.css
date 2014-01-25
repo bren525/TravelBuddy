@@ -30,6 +30,37 @@ form {
 	font-family: 'Lato', sans-serif;
 
 }
+#taxi {
+	background-color: transparent; 
+	width:73px;
+	height:73px;
+	text-align:center;
+	display: inline-block;
+	background-image: url('../images/taxi1.png');
+}
+#taxi.on{
+	background-image: url('../images/taxipressed1.png');
+}
+
+#transit {
+	background-color: transparent; 
+	width:73px;
+	height:73px;
+	text-align:center;
+	display: inline-block;
+	margin-left: 80px; 
+	background-image: url('../images/bus1.png');
+}
+#transit.on{
+	background-image: url('../images/buspressed1.png');
+}
+#tranlabel{
+	font-size: 18px;
+	display: inline;
+}
+#taxilabel{
+	font-size: 18px;
+}
 #school {
 	background-color: transparent; 
 	border-style: solid; 
@@ -134,36 +165,45 @@ table {
 	font-size:30px;
 	font-family: 'Lato', sans-serif;
 }
-#taxi{
-	border:0px solid red;
+#taxiPanel{
 	display:inline-block;
 	position:relative;
 	text-align:left;
 	width:60%;
 	font-size:20px;
-
+	border-top:1px solid grey;
+	border-bottom:1px solid grey;
+	padding:20px auto;
 }
 .icon {
 	position:absolute;
-	border:0px solid green;
 	display:inline;
-	width:110px;
-	height:100%;
+	width:60px;
+	height:90%;
+	margin:10px auto;
 	float:left;
-	background:url(/images/bg.jpg) no-repeat center center ;
 	text-align:center;
+	border-style: solid; 
+	border-width: 0px 2px 0px 0px; 
+	border-color: #1F438D;
+}
+#taxiIco{
+	background:url("../images/tinytaxi1.png") no-repeat center center ;
+}
+#publicIco{
+	background:url("../images/tinybus1.png") no-repeat center center ;
 }
 .userSchool{
 	border:0px solid yellow;
 	font-size:12px;
 }
-#public{
+#publicPanel{
 	display:inline-block;
 	position:relative;
 	text-align:left;
 	width:60%;
 	font-size:20px;
-	border:0px solid red;
+	border-bottom:1px solid grey;
 }
 .triplist{
 	border:0px solid white;
@@ -182,4 +222,25 @@ table {
 .tripdate{
 	font-size:12px;	
 	width:40%;
+
+#switch{
+	background-image: url('../images/arrow1.png');
+	height: 60px;
+	width: 90px;
+	background-color: transparent;
+}
+#ampm{
+	text-align:center;
+	padding-top:8px;
+	height: 50px;
+	width: 79px;
+	background-color: #069FA5;
+	display: inline-block;
+	border-radius:15px;
+	-moz-border-radius:15px; /* Old Firefox */
+	color:white;
+	font-weight:regular;
+	font-size:24px;
+	font-family: 'Lato', sans-serif;
+	margin-left: 10px;
 }

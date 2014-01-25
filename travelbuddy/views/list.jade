@@ -3,13 +3,13 @@ extends layout
 block content
   div(id="title1")=title
   form( action="")
-    div(id="startpoint")
-    img(src="" width="20px" height="20px")
-    div(id="destination")
-    div(id="taxi")
-      div(class="icon")
+    div(id="startpoint")=startPoint
+    img(src="../images/toparow1.png" height="20px")
+    div(id="destination")=destination
+    div(id="taxiPanel")
+      div(class="icon" id="taxiIco")
       - each trip in taxitrips
-        table(border="0px" width="80%") 
+        table(width="80%") 
           tr
             td(width="6%")
               input(type="checkbox" name="people" value='#{trip.user}')
@@ -24,9 +24,9 @@ block content
               div(class="tripdate") #{trip.datetime}
             td(width="10%")
               a(href="#")
-                img(src="" width="40px" height="40px" alt="search")
-    div(id="public")
-      div(class="icon")
+                img(src="../images/magnifying-glass1.png" width="40px" height="40px" alt="search")
+    div(id="publicPanel")
+      div(class="icon" id="publicIco")
       - each trip in publictrips
         table(border="0px" width="80%") 
           tr
@@ -43,7 +43,7 @@ block content
               div(class="tripdate") #{trip.datetime}
             td(width="10%")
               a(href="#")
-                img(src="" width="40px" height="40px" alt="search")
+                img(src="../images/magnifying-glass1.png" width="40px" height="40px" alt="search")
     p
       div(id="submitbutton")
         input(type="submit" value="Submit" class = "btn btn-default")
