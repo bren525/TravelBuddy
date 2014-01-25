@@ -4,32 +4,54 @@ block content
   div(id="title1")=title
   form(name="startinput" action="/submit" method = "post")
     p
-      div(id="inform") I'm a student at 
-        input(type="text" id="school" name="school" placeholder="School")  
+      div(id="inform") I'm a student at &nbsp;
+        input(type="text" id="school" name="school" placeholder="School ")  
     p
-      input(type="text" id="location1" name="location1" placeholder="School")
-      button(id="switch" value="switch" class="right") -->
-      input(type="text" name="location2" placeholder="Destination")
+      input(type="text" id="location1" name="location1" placeholder="School ")
+      
+      button(id="switch" value="switch" class="right" style="margin-left:80px;margin-right:80px;") -->
+      input(type="text" id="location2" name="location2" placeholder="Destination ")
     p
-      div I need to leave by
-    p
+      div(id="leavetext") I need to leave by
+      br
       input(type="hidden" name = "date")
-      - for (var i=0; i<7; i++) {
-          //- div(id=i class="unselected") i
-      - }
-      div(id="1" class="unselected") 1
-      div(id="2" class="unselected") 2
-      div(id="3" class="unselected") 3
-      div(id="4" class="unselected") 4
-      div(id="5" class="unselected") 5
-      div(id="6" class="unselected") 6
-      div(id="7" class="unselected") 7
+      table
+        tr
+          td
+            div(id="week1" class="weekblock") 1
+          td
+            div(id="week2" class="weekblock") 2
+          td
+            div(id="week3" class="weekblock") 3
+          td
+            div(id="week4" class="weekblock") 4
+          td
+            div(id="week5" class="weekblock") 5
+          td
+            div(id="week6" class="weekblock") 6
+          td
+            div(id="week7" class="weekblock") 7
+        tr
+          td
+            div(id="1" class="unselected") 1
+          td
+            div(id="2" class="unselected") 2
+          td
+            div(id="3" class="unselected") 3
+          td
+            div(id="4" class="unselected") 4
+          td
+            div(id="5" class="unselected") 5
+          td
+            div(id="6" class="unselected") 6
+          td
+            div(id="7" class="unselected") 7
 
     p at
     p
-      input(type="text" name="hours" placeholder="Hours")
+      input(type="text" id="hours" name="hours" placeholder="Hours")
       span &nbsp;:&nbsp;
-      input(type="text" name="minutes" placeholder="Minutes")
+      input(type="text" id="minutes" name="minutes" placeholder="Minutes")
     p
       div(id="submitbutton")
         input(type="submit" value="Submit" class = "btn btn-default")
