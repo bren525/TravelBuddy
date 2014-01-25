@@ -3,7 +3,8 @@ extends layout
 block content
   
   h1= title
-  form(name="startinput" action="/submit" method = "post")
+  form(id="tripInput" action="/submit" method = "post")
+    input(type="hidden" name="user" value="bob")
     p
       div I'm a student at 
         input(type="text" name="school" placeholder="School")  
@@ -14,10 +15,6 @@ block content
     p
       div I need to leave by
     p
-      input(type="hidden" name = "date")
-      - for (var i=0; i<7; i++) {
-          //- div(id=i class="unselected") i
-      - }
       div(id="1" class="unselected") 1
       div(id="2" class="unselected") 2
       div(id="3" class="unselected") 3
@@ -25,7 +22,7 @@ block content
       div(id="5" class="unselected") 5
       div(id="6" class="unselected") 6
       div(id="7" class="unselected") 7
-
+      input(id="date" type="hidden" name="date")
     p at
     p
       input(type="text" name="hours" placeholder="Hours")

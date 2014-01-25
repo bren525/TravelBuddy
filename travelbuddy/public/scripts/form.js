@@ -1,5 +1,13 @@
 $(document).ready(
     function(){
+        var d = new Date();
+        var weekdays = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+        for(var i =1; i<8; i++){
+            $("#"+i).text(weekdays[d.getDay()]+" "+d.getDate())
+            .val(d.getMonth()+"/"+d.getDate()+"/"+d.getFullYear());
+            console.log((d.getMonth()+1)+"/"+d.getDate()+"/"+d.getFullYear());
+            d.setDate(d.getDate()+1);
+        }
         $("#switch").click(function () {
         	var l1=$('[name="location1"]').val();
         	var l2=$('[name="location2"]').val();
@@ -12,15 +20,12 @@ $(document).ready(
                 $(this).text("<--")
             }else{
                 $(this).text("No Class")
-            }
-        	return false;        	
+            }        	
         });
         $(".unselected").click(function(){
-            console.log("clicked!")
         	$(".selected").removeClass("selected");
-        	$(this).toggleClass("selected");
-            $(this).text("selected");
-
+        	$(this).addClass("selected");
+            $("#date").val($(this).val());
         });
           
     });

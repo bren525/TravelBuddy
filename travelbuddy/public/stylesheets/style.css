@@ -11,10 +11,18 @@ a {
 	width: 100px;
 	background-color: #86cdeb;
 	display: inline-block;
+	text-align: center;
+	padding-top: 30px;
+	margin-right: 10px;
 }
 .selected {
 	height: 150px;
-	width: 150px;
+	width: 100px;
 	background-color: #d24726;
-	display: inline-block;
+}
+#switch.right {
+
+}
+#switch.left {
+
 }
