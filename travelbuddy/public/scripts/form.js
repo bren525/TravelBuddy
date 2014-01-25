@@ -22,6 +22,10 @@ $(document).ready(
             //$(this).text("selected");
 
         });
+        $("#school").blur(function() {
+  			var s1=$('#school').val();
+        	$('[name="location1"]').val(s1);
+		});
         var today = new Date();
     	for ( var i = 1; i < 8; i++ ) {    		
     		var nextday = new Date(today.getTime() + i * 24 * 60 * 60 * 1000); 
