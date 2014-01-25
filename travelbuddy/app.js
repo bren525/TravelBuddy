@@ -30,6 +30,17 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
+// set up hacky model
+var models = require('./models');
+var Trip = models.Trip;
+
+global.alltrips = [
+  new Trip('Tala', 'Providence', 'Boston', new Date('January 24, 2014 12:00:00')),
+  new Trip('Brendan', 'New York', 'Alaska', new Date('January 23, 2014 12:00:00')),
+  new Trip('Bob Loblaw', 'New York', 'Nowhere', new Date('January 24, 2014 12:00:00')),
+  new Trip('Dorothy', 'Providence', 'Oz', new Date('January 24, 2014 12:00:00')),
+];
+
 app.get('/', routes.index);
 app.get('/users', user.list);
 
