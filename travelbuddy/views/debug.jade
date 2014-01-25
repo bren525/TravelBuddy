@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  div
+  - each trip in alltrips
+    p #{trip.user} | #{trip.start_location} | #{trip.end_location} | #{trip.start_time}
+
